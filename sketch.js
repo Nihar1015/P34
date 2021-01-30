@@ -6,8 +6,8 @@ var foodStock
 function preload()
 {
   //load images here
-  dogImg = loadImage("Dog.png");
-  happyDogImg = loadImage("happydog.png");
+  dogImg = loadImage("images/Dog.png");
+  happyDogImg = loadImage("images/happydog.png");
 }
 
 function setup() {
@@ -15,6 +15,8 @@ function setup() {
   
   foodStock=database.ref('food');
   foodStock.on("value", readStock);
+
+  database = firebase.database();
   
 }
 
